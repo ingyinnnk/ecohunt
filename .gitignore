@@ -1,0 +1,5 @@
+secrets.bat
+venv/
+__pycache__/
+*.pyc
+*.log

@@ -1,0 +1,128 @@
+﻿<?php
+    session_start();
+    include ("classes/connect.php");
+    include ("classes/login_class.php");
+
+    // check if user is logged in
+    if (isset($_SESSION['ecohunt_userid']) && is_numeric($_SESSION['ecohunt_userid'])) {
+
+        $id = $_SESSION['ecohunt_userid'];
+        $login = new Login();
+
+        $result = $login -> check_login($id);
+
+    } else{
+        header("Location: login.php");
+        die; 
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHunt</title>
+    <link rel="stylesheet" href="trash_style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&family=Russo+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header" id="header">
+
+           <!--navigation-->
+        <nav class="nav container">
+
+            <a href="#" class="nav__logo">
+                Eco<span>Hunt</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="homepage.php" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="map.php" class="nav__link">Map</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="quest.php" class="nav__link">Quest</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="aichat.php" class="nav__link">AI Chat</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="aboutus.php" class="nav__link">Our Aim</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="logout.php" class="nav__link">Logout</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+                
+                <img src="nav-img.png" alt=" nav image" class="nav__img">
+            </div>
+            
+            <!-- toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home">
+
+            <div class="home__shape-small"></div>
+            <div class="home__shape-big"></div>
+            <img src="shape-bg.png" alt="" class="home__shape-bg">
+
+            <div class="home__container container">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        <span>From </span> Trash
+                        <span>to</span>
+                        Treasure 
+                    </h1>
+                    <p class="home__description">
+                        Uniting together for a clearer <br>
+                        planet at EcoHunt
+                    </p>
+                    <a href="map.php" class="home__button">Let's Hunt!</a>
+                </div>
+
+                <div class="home__images">
+                    <img src="splash-removebg-preview.png" alt="splash img" class="home__splash">
+
+                    <div class="home__bottle-animate">
+                        <img src="bo2.png" alt="bottle img" class="home__bottle">
+                    </div>
+
+                    <div>
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        <img src="leaf.png" alt="leaf img" class="home__leaf">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="main.js"></script>
+    <!-- <section class="sec">
+
+    </section> -->
+</body>
+</html>

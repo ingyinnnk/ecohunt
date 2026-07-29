@@ -1,0 +1,95 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "1",
+                "color": "grey",
+                "title": "Wingabar Street, Bahan",
+                "bounty": 500,
+                "xp": 2000,
+                "difficulty": "Easy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    96.15751212075398,
+                    16.804144420442316
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "2",
+                "color": "grey",
+                "title": "Example Marker 2",
+                "bounty": 500,
+                "xp": 2000,
+                "difficulty": "Medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    96.15672623356265,
+                    16.803944141698032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "3",
+                "color": "grey",
+                "title": "Example Marker 3",
+                "bounty": 500,
+                "xp": 2000,
+                "difficulty": "Hard"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    96.15772623356266,
+                    16.803944141698032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "4",
+                "color": "grey",
+                "title": "Example Marker 4",
+                "bounty": 500,
+                "xp": 2000,
+                "difficulty": "Medium"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    96.15772623356266,
+                    16.804144141698032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "5",
+                "color": "green",
+                "title": "Example Marker 5",
+                "bounty": 500,
+                "xp": 2000,
+                "difficulty": "Easy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    96.15872623356265,
+                    16.80434414169803
+                ]
+            }
+        }
+    ]
+}
